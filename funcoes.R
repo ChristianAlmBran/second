@@ -3,4 +3,4 @@ kmToMiles <- function(km) {
   return(miles)
 }
 
-kmToMiles(10)
+kmToMiles(20)
