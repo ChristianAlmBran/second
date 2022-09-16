@@ -8,11 +8,9 @@ DicionarioDadosReceita <- fromJSON(file="http://dados.recife.pe.gov.br/dataset/b
 
 DicionarioDadosReceita <- as.data.frame(DicionarioDadosReceita)
 
-# extração excel
-pacman::p_load(readxl)
+# extraÃ§Ã£o excel
 
-CensoEscolarRecife2020<- read_xlsx('http://dados.recife.pe.gov.br/dataset/b5b2cfab-8c7c-4ad9-91f3-e500777a46fc/resource/cb5a01d0-6e6d-4b9a-9442-a97d9118f4ef/download/anexo-i-2016.xlsx')
+pacman::p_load(rio)
 
-# Extração excel pelo arquivo no computador, baixado do link acima
+CensoEscolarRecife2020 <- rio::import('http://dados.recife.pe.gov.br/dataset/b5b2cfab-8c7c-4ad9-91f3-e500777a46fc/resource/cb5a01d0-6e6d-4b9a-9442-a97d9118f4ef/download/anexo-i-2016.xlsx')
 
-CensoEscolarRecife2020_2 <- read_xlsx('bases_originais/anexo-i-2016.xlsx', sheet=1)
